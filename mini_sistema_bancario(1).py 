@@ -1,0 +1,37 @@
+#Mini-Sistema-Bancário
+
+saldo = 1000
+
+while True:
+    
+    print("\n=== Banco ===")
+    print("1 - Ver saldo")
+    print("2 - Sacar")
+    print("3 - Depositar")
+    print("4 - Sair")
+    
+    opcao = input("Escolha uma opção: ")
+    
+    if opcao == "1":
+        print("Seu saldo é", saldo)
+    
+    elif opcao == "2":
+        saque = int(input("Quanto dese jasacar"))
+           
+        if saque <= saldo:
+            saldo = saldo - saque
+            print("Saque rralizado")              
+        else:
+            print("Saldo insuficiente")
+                       
+    elif opcao == "3":
+        deposito = int(input("Quanto deseja depositar"))
+        saldo = saldo + deposito    
+        print("Deposito realizado com sucesso") 
+        
+    elif opcao == "4":
+        print("Saindo...")
+        break
+        
+    else:
+        print("Opção invalida")                       
